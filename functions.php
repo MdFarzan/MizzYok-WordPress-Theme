@@ -39,6 +39,17 @@ if(!function_exists('my_reg_sidebars')){
             'after_title'   => '</h3>',
         ) );
 
+
+        // footer
+        register_sidebar( array(
+            'name'          => __( 'Footer', TEXT_DOMAIN ),
+            'id'            => 'footer-widgets',
+            'before_widget' => '<div id="%1$s" class="col-md-4 col-lg-3 %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h3 class="widget-title">',
+            'after_title'   => '</h3>',
+        ) );
+
     }
 
     add_action( 'widgets_init', 'my_reg_sidebars' );

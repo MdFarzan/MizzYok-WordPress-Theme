@@ -573,6 +573,18 @@ section{
 	font-weight: 400;
 }
 
+footer{
+	background-color:var(--p-color);
+	
+}
+
+.footer-content-wrap{
+	padding:80px 0;
+}
+
+.cta-wrap{
+	padding-bottom: 0px;
+}
 
 @media (max-width:991px){
 	.hero #navbarNav {
