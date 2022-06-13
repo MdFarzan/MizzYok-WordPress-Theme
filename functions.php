@@ -114,5 +114,17 @@ if(!function_exists('my_theme_support')){
 
 }
 
+
+// styling menus
+add_filter( 'nav_menu_link_attributes', function($atts) {
+    $atts['class'] = "nav-link m-link";
+    return $atts;
+}, 100, 1 );
+
+add_filter( 'nav_menu_css_class', function($classes) {
+    $classes[] = 'nav-item';
+    return $classes;
+}, 10, 1 );
+
 ?>
 

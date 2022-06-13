@@ -75,10 +75,10 @@ header .nav-link{
 	width: 100%;
 }
 
-.cta-btn {
+header #primary-menu li:last-child {
 	background-color: var(--s-color);
 	margin: 0 10px 0 18px;
-	padding: 8px 24px !important;
+	padding: 2px 10px !important;
 	
 	font-weight: 500;
 	border: 1px solid var(--s-color);
@@ -87,12 +87,12 @@ header .nav-link{
 	overflow: hidden;
 }
 
-.cta-btn .btn-text{
+header #primary-menu li:last-child a{
     font-weight: 500;
     color: var(--p-color);
 }
 
-.cta-btn::after {
+header #primary-menu li:last-child::after {
 	content: "text";
 	position: absolute;
 	width: 100%;
@@ -104,20 +104,20 @@ header .nav-link{
     transition:1s cubic-bezier(.43,1.51,.9,-0.06);
 }
 
-.cta-btn:hover::after {
+header #primary-menu li:last-child:hover::after {
 	color: var(--s-color);
 	transform: scaleX(3) scaleY(8);
 }
 
 
-.cta-btn .btn-text{
+header #primary-menu li:last-child a{
     transition-delay: 100ms;
     transition:500ms;
     position:relative;
     z-index:5;
 }
 
-.cta-btn:hover .btn-text{    
+header #primary-menu li:last-child:hover a{    
     color: var(--s-color);
 }
 
@@ -154,7 +154,7 @@ header .m-link:hover:after{
     width:85%;
 }
 
-.m-link.active::after {
+.m-link.active::after, li.current-menu-item a:after {
 	opacity: 1;
 	width: 8px;
 	left: -54px;
@@ -162,7 +162,7 @@ header .m-link:hover:after{
 	top: 6px;
 }
 
-.m-link.active:hover:after{
+.m-link.active:hover:after, li.current-menu-item a:hover:after{
     width: 8px;
 	left: -54px;
 	height: 8px;
@@ -598,19 +598,19 @@ section{
 		padding: 10px 0px;
 	}
 
-	.cta-btn {
+	header #primary-menu li:last-child {
 		margin-top: 30px;
 		margin-left: 0px;
 		max-width: 200px;
 	}
 
 	
-	.cta-btn:hover::after {
+	header #primary-menu li:last-child:hover::after {
 		color: var(--s-color);
 		transform: scaleX(3) scaleY(10);
 	}
 
-	.cta-btn::after {
+	header #primary-menu li:last-child::after {
 		left: -120px;
 		bottom: -10px;
 	}

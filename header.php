@@ -29,26 +29,17 @@
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"><img src="<?php echo TEMP_DIR_URI. '/img/menu-icon.png' ?>"></span>
                         </button>
-                        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                            <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link active m-link" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link m-link" href="#">About Us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link m-link" href="#">Services</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link m-link" href="#">Testimonial</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link cta-btn" href="#"><span class="btn-text">CONTACT US</span></a>
-                            </li>
-                            
-                            </ul>
-                        </div>
+                        
+                            <?php 
+                                wp_nav_menu( [
+                                    'theme_location' => 'primary_menu',
+                                    'menu_class' => 'navbar-nav',
+                                    'menu_id' => 'primary-menu',
+                                    'container_class' => 'collapse navbar-collapse justify-content-end',
+                                    'container_id' => 'navbarNav'
+                                ] );
+                            ?>
+                        
                         </div>
                     </nav>
 
