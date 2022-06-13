@@ -54,7 +54,8 @@ if(!function_exists('my_add_static_files')){
         wp_enqueue_style( 'my_bootstrap.css', TEMP_DIR_URI . '/css/bootstrap.css', [], 5.1);
         wp_enqueue_style('my_slider.css', TEMP_DIR_URI . '/css/paperstack.css', [], 1.0);
         wp_enqueue_style('my_style.css', TEMP_DIR_URI . '/css/style.css', [], 1.0);
-
+        wp_enqueue_style( 'my_google_fonts', 'https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Ubuntu:ital,wght@0,300;0,400;0,500;1,400&display=swap',array(), null );
+        
         wp_enqueue_script('jquery');
         wp_enqueue_script( 'my_boostrap.js', TEMP_DIR_URI . '/js/bootstrap.js', ['jquery'], 5.1, true );
         wp_enqueue_script('my_slider.js', TEMP_DIR_URI . '/js/paperstack.js', ['jquery'], 1.0, true );
