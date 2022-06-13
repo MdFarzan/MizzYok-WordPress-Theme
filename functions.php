@@ -65,4 +65,54 @@ if(!function_exists('my_add_static_files')){
     add_action('wp_enqueue_scripts', 'my_add_static_files');
 }
 
+
+
+// adding title tag
+if(!function_exists('my_theme_support')){
+
+    function my_theme_support(){
+
+        add_theme_support('title-tag');
+
+        add_theme_support( 'custom-logo', array(
+            'height' => 150,
+            'width'  => 100,
+            'flex-height'          => true,
+            'flex-width'           => true,
+            'header-text'          => array( 'site-title', 'site-description' ),
+            'unlink-homepage-logo' => true
+        ) );
+
+        add_theme_support('post-formats', [
+            'aside',
+            'audio',
+            'chat',
+            'gallery',
+            'image',
+            'link',
+            'quote',
+            'status',
+            'video',
+            ]);
+
+        add_theme_support('post-thumbnails');
+
+        add_theme_support('post-formats');
+
+        add_theme_support('align-wide');
+
+        add_theme_support( 'automatic-feed-links' );
+
+        add_theme_support( 'custom-background', ['default-color'=> '#121212'] );
+
+
+
+    }
+
+    add_action( 'after_setup_theme', 'my_theme_support');
+    
+
+}
+
 ?>
+
