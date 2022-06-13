@@ -45,4 +45,23 @@ if(!function_exists('my_reg_sidebars')){
 
 }
 
+
+// adding script and styles
+if(!function_exists('my_add_static_files')){
+
+    function my_add_static_files(){
+
+        wp_enqueue_style( 'my_bootstrap.css', TEMP_DIR_URI . '/css/bootstrap.css', [], 5.1);
+        wp_enqueue_style('my_slider.css', TEMP_DIR_URI . '/css/paperstack.css', [], 1.0);
+        wp_enqueue_style('my_style.css', TEMP_DIR_URI . '/css/style.css', [], 1.0);
+
+        wp_enqueue_script('jquery');
+        wp_enqueue_script( 'my_boostrap.js', TEMP_DIR_URI . '/js/bootstrap.js', ['jquery'], 5.1, true );
+        wp_enqueue_script('my_slider.js', TEMP_DIR_URI . '/js/paperstack.js', ['jquery'], 1.0, true );
+        wp_enqueue_script( 'my_script.js', TEMP_DIR_URI.'/js/script.js', ['jquery'],  1.0, true );
+    }
+
+    add_action('wp_enqueue_scripts', 'my_add_static_files');
+}
+
 ?>
