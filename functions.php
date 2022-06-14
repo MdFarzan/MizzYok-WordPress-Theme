@@ -278,9 +278,147 @@ if(!function_exists('my_customize_register')){
             'type'        => 'text'
         ) );
 
-        
-
         #hero section ends
+
+
+        # about section starts
+        $wp_customize->add_section('about_section', [
+            'title' => __('About Section', TEXT_DOMAIN),
+            'description' => __('Add/Update content of about section here', TEXT_DOMAIN),
+            'panel' => 'theme_options'
+        ]);
+
+        $wp_customize->add_setting( 'about_sub_title', array(
+            'type'                 => 'theme_mod',
+            'default'              => 'Section sub title',
+            'transport'            => 'refresh', // Options: refresh or postMessage.
+            'capability'           => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ) );
+
+        
+        $wp_customize->add_control( 'about_sub_title', array(
+            'label'       => __( 'About Sub Title', TEXT_DOMAIN ),
+            'section'     => 'about_section',
+            'type'        => 'text'
+        ) );
+
+        $wp_customize->add_setting('about_title', [
+            'type' => 'theme_mod',
+            'default' => 'section title',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback' => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('about_title', [
+            'label' => __('About Title', TEXT_DOMAIN),
+            'section' => 'about_section',
+            'type' => 'text'
+        ]);
+
+        $wp_customize->add_setting('about_desc',[
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback' => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('about_desc', [
+            'label' => __('Description', TEXT_DOMAIN),
+            'description' => __('Add your description here', TEXT_DOMAIN),
+            'type' => 'textarea',
+            'section' => 'about_section'
+        ]);
+
+
+        $wp_customize->add_setting( 'about_btn', array(
+            'type'                 => 'theme_mod',
+            'default'              => 'enable',
+            'transport'            => 'refresh', 
+            'capability'           => 'edit_theme_options',
+            'sanitize_callback'    => '' 
+        ) );
+
+        // continue from sanitizing checkbox
+        // Control: Checkbox.
+        $wp_customize->add_control( 'about_btn', array(
+            'label'       => __( 'Show button', TEXT_DOMAIN ),
+            'description' => __( 'Show/Hide button', TEXT_DOMAIN ),
+            'section'     => 'about_section',
+            'type'        => 'checkbox'
+        ) );
+
+        $wp_customize->add_setting( 'about_btn_label', array(
+            'type'                 => 'theme_mod',
+            'default'              => 'BUTTON TEXT',
+            'transport'            => 'refresh', // Options: refresh or postMessage.
+            'capability'           => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ) );
+
+        
+        $wp_customize->add_control( 'about_btn_label', array(
+            'label'       => __( 'Button Label', TEXT_DOMAIN ),
+            'section'     => 'about_section',
+            'type'        => 'text'
+        ) );
+
+        $wp_customize->add_setting( 'about_btn_link', array(
+            'type'                 => 'theme_mod',
+            'default'              => '#',
+            'transport'            => 'refresh', // Options: refresh or postMessage.
+            'capability'           => 'edit_theme_options',
+            'sanitize_callback'    => 'esc_url_raw'
+        ) );
+
+        
+        $wp_customize->add_control( 'about_btn_link', array(
+            'label'       => __( 'Button link', TEXT_DOMAIN ),
+            'section'     => 'hero_section',
+            'type'        => 'text'
+        ) );
+
+
+        $wp_customize->add_setting( 'about_img', array(
+            'type'                 => 'theme_mod',
+            'default'              => '',
+            'transport'            => 'refresh', // Options: refresh or postMessage.
+            'capability'           => 'edit_theme_options',
+            'sanitize_callback'    => 'my_sanitize_img'
+        ) );
+
+        
+        $wp_customize->add_control(
+            new WP_Customize_Upload_Control( 
+                $wp_customize, 
+                'about_img', 
+                array(
+                    'label'      => __( 'Image', TEXT_DOMAIN ),
+                    'description' => __('Recommended size 560px x 570px'),
+                    'section'    => 'about_section',
+                    'settings'   => 'about_img',
+                    
+                ) ) 
+        );
+
+        $wp_customize->add_setting( 'about_img_alt', array(
+            'type'                 => 'theme_mod',
+            'default'              => 'image',
+            'transport'            => 'refresh', // Options: refresh or postMessage.
+            'capability'           => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ) );
+
+        
+        $wp_customize->add_control( 'about_img_alt', array(
+            'label'       => __( 'Image ALT text', TEXT_DOMAIN ),
+            'section'     => 'about_section',
+            'type'        => 'text'
+        ) );
+
+        #about section ends
 
 
     }

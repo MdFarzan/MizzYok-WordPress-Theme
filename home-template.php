@@ -9,6 +9,10 @@ require_once('constant.php');
 
 //  die();
 
+
+
+
+
 ?>
 
 
@@ -82,23 +86,27 @@ require_once('constant.php');
                 <div class="row">
                     
                     <div class="col-md-5 g-0 align-items-center">
-                        <div class="about-content img-content text-center text-lg-start">
-                            <img src="img/team.jpg" class="img-fluid" alt="img" />
+                        <div class="about-content v-align-middle img-content text-center text-lg-start">
+                            <img src="<?php echo get_theme_mod('about_img','#') ?>" class="img-fluid" alt="<?php echo get_theme_mod('about_img_alt', 'image') ?>" />
                         </div>
                     </div>
                     <div class="col-md-7 d-flex align-items-center">
                         <div class="about-content text-content">
-                            <span class="sub-heading text-center text-md-start">Do you know that</span>
-                            <h2 class="text-center text-md-start">About us</h2>
+                            <span class="sub-heading text-center text-md-start"><?php echo get_theme_mod('about_sub_title', 'Sub Title'); ?></span>
+                            <h2 class="text-center text-md-start"><?php echo get_theme_mod('about_title', 'Section Title'); ?></h2>
                             <p class="pt-3 pb-2">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates deleniti inventore recusandae id fuga! Rerum iure suscipit recusandae consectetur blanditiis eos necessitatibus, alias molestiae, impedit vero aspernatur maiores praesentium sed.
-                                Consequuntur quasi consectetur ea officia facere explicabo velit, sint rerum! Ipsam laborum, officiis in modi odio voluptatum enim consectetur tempore atque dolorem et magni sit inventore nihil nobis asperiores ducimus.
-                            </p>
-                            <p class="pb-3">
-                                Consequuntur quasi consectetur ea officia facere explicabo velit, sint rerum! Ipsam laborum, officiis in modi odio voluptatum enim consectetur tempore atque dolorem et magni sit inventore nihil nobis asperiores ducimus.
+                                <?php echo get_theme_mod('about_desc', ''); ?>
+                                
                             </p>
                             <div class="text-center text-md-start">
-                                <a class="prim-btn sec-btn"><span class="btn-text">Read more</span></a>
+                                <?php
+                                    if(get_theme_mod('about_btn') == true){
+                                ?>
+                                <a class="prim-btn sec-btn" href="<?php echo  get_theme_mod('about_btn_link', '#'); ?>"><span class="btn-text"><?php echo get_theme_mod('about_btn_label', 'Button Label'); ?></span></a>
+
+                                <?php
+                                    }
+                                ?>
                             </div>
                         </div>
                     </div>
