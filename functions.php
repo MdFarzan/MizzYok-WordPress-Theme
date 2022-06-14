@@ -893,6 +893,252 @@ if(!function_exists('my_customize_register')){
         // service 6 ends
         #sevice section ends
         
+        
+        # statistics section starts
+
+        $wp_customize->add_section('stat_section', [
+            'title' => __('Statistics Section', TEXT_DOMAIN),
+            'description' => __('Add/Update content of statistics section here', TEXT_DOMAIN),
+            'panel' => 'theme_options'
+        ]);
+
+
+        $wp_customize->add_setting( 'stat_bg', array(
+            'type'                 => 'theme_mod',
+            'default'              => '',
+            'transport'            => 'refresh', // Options: refresh or postMessage.
+            'capability'           => 'edit_theme_options',
+            'sanitize_callback'    => 'my_sanitize_img'
+        ) );
+
+        
+        $wp_customize->add_control(
+            new WP_Customize_Upload_Control( 
+                $wp_customize, 
+                'stat_bg', 
+                array(
+                    'label'      => __( 'Section background Image', TEXT_DOMAIN ),
+                    'description' => __('Select background image for statistics section'),
+                    'section'    => 'stat_section',
+                    'settings'   => 'stat_bg',
+                    
+                ) ) 
+        );
+
+
+        // stat1 starts
+        $wp_customize->add_setting( 'stat1_img', array(
+            'type'                 => 'theme_mod',
+            'default'              => '',
+            'transport'            => 'refresh', // Options: refresh or postMessage.
+            'capability'           => 'edit_theme_options',
+            'sanitize_callback'    => 'my_sanitize_img'
+        ) );
+
+        
+        $wp_customize->add_control(
+            new WP_Customize_Upload_Control( 
+                $wp_customize, 
+                'stat1_img', 
+                array(
+                    'label'      => __( 'Stat 1: icon/image', TEXT_DOMAIN ),
+                    'description' => __('Recommended size 512px x 512px'),
+                    'section'    => 'stat_section',
+                    'settings'   => 'stat1_img',
+                    
+                ) ) 
+        );
+
+
+        $wp_customize->add_setting('stat1_num', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('stat1_num', [
+            'type' => 'text',
+            'label' => __('Stat 1: Number', TEXT_DOMAIN),
+            'section'=> 'stat_section'
+        ]);
+
+        $wp_customize->add_setting('stat1_title', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('stat1_title', [
+            'type' => 'text',
+            'label' => __('Stat 1: Title', TEXT_DOMAIN),
+            'section'=> 'stat_section'
+        ]);
+        // stat1 ends
+
+        // stat2 starts
+        $wp_customize->add_setting( 'stat2_img', array(
+            'type'                 => 'theme_mod',
+            'default'              => '',
+            'transport'            => 'refresh', // Options: refresh or postMessage.
+            'capability'           => 'edit_theme_options',
+            'sanitize_callback'    => 'my_sanitize_img'
+        ) );
+
+        
+        $wp_customize->add_control(
+            new WP_Customize_Upload_Control( 
+                $wp_customize, 
+                'stat2_img', 
+                array(
+                    'label'      => __( 'Stat 2: icon/image', TEXT_DOMAIN ),
+                    'description' => __('Recommended size 512px x 512px'),
+                    'section'    => 'stat_section',
+                    'settings'   => 'stat2_img',
+                    
+                ) ) 
+        );
+
+
+        $wp_customize->add_setting('stat2_num', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('stat2_num', [
+            'type' => 'text',
+            'label' => __('Stat 2: Number', TEXT_DOMAIN),
+            'section'=> 'stat_section'
+        ]);
+
+        $wp_customize->add_setting('stat2_title', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('stat2_title', [
+            'type' => 'text',
+            'label' => __('Stat 2: Title', TEXT_DOMAIN),
+            'section'=> 'stat_section'
+        ]);
+        // stat2 ends
+
+        // stat3 starts
+        $wp_customize->add_setting( 'stat3_img', array(
+            'type'                 => 'theme_mod',
+            'default'              => '',
+            'transport'            => 'refresh', // Options: refresh or postMessage.
+            'capability'           => 'edit_theme_options',
+            'sanitize_callback'    => 'my_sanitize_img'
+        ) );
+
+        
+        $wp_customize->add_control(
+            new WP_Customize_Upload_Control( 
+                $wp_customize, 
+                'stat3_img', 
+                array(
+                    'label'      => __( 'Stat 3: icon/image', TEXT_DOMAIN ),
+                    'description' => __('Recommended size 512px x 512px'),
+                    'section'    => 'stat_section',
+                    'settings'   => 'stat3_img',
+                    
+                ) ) 
+        );
+
+
+        $wp_customize->add_setting('stat3_num', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('stat3_num', [
+            'type' => 'text',
+            'label' => __('Stat 3: Number', TEXT_DOMAIN),
+            'section'=> 'stat_section'
+        ]);
+
+        $wp_customize->add_setting('stat3_title', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('stat3_title', [
+            'type' => 'text',
+            'label' => __('Stat 3: Title', TEXT_DOMAIN),
+            'section'=> 'stat_section'
+        ]);
+        // stat3 ends
+
+        // stat4 starts
+        $wp_customize->add_setting( 'stat4_img', array(
+            'type'                 => 'theme_mod',
+            'default'              => '',
+            'transport'            => 'refresh', // Options: refresh or postMessage.
+            'capability'           => 'edit_theme_options',
+            'sanitize_callback'    => 'my_sanitize_img'
+        ) );
+
+        
+        $wp_customize->add_control(
+            new WP_Customize_Upload_Control( 
+                $wp_customize, 
+                'stat4_img', 
+                array(
+                    'label'      => __( 'Stat 4: icon/image', TEXT_DOMAIN ),
+                    'description' => __('Recommended size 512px x 512px'),
+                    'section'    => 'stat_section',
+                    'settings'   => 'stat4_img',
+                    
+                ) ) 
+        );
+
+
+        $wp_customize->add_setting('stat4_num', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('stat4_num', [
+            'type' => 'text',
+            'label' => __('Stat 4: Number', TEXT_DOMAIN),
+            'section'=> 'stat_section'
+        ]);
+
+        $wp_customize->add_setting('stat4_title', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('stat4_title', [
+            'type' => 'text',
+            'label' => __('Stat 4: Title', TEXT_DOMAIN),
+            'section'=> 'stat_section'
+        ]);
+        // stat4 ends
+
+        # statistics section ends
 
     }
 

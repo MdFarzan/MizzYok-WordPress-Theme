@@ -5,9 +5,9 @@
 */
 
 require_once('constant.php');
-// $show_cta = get_theme_mod('cta_btn', true);
+$stat_bg =  get_theme_mod('stat_bg', '');
 
-//  die();
+
 
 
 
@@ -215,7 +215,7 @@ require_once('constant.php');
             </div>
         </section>
 
-        <div class="statistics-wrap">
+        <div class="statistics-wrap" style="background-image:url('<?php echo get_theme_mod('stat_bg', '') ; ?>;')">
             <section class="statistics">
                 
                     <div class="container">
@@ -223,36 +223,36 @@ require_once('constant.php');
                             <div class="col-md-6 col-lg-3 py-3">
                                 <div class="stat-box">
                                     <div class="icon-stat">
-                                        <span class="icon"><img src="img/clients.png"></span><span class="stat">200<strong>+</strong></span>
+                                        <span class="icon"><img src="<?php echo get_theme_mod('stat1_img', ''); ?>" alt="icon"></span><span class="stat"><?php echo get_theme_mod('stat1_num', ''); ?><strong>+</strong></span>
                                     </div>
-                                    <p>Satisfied Clients
+                                    <p><?php echo get_theme_mod('stat1_title', ''); ?>
                                     </p>
                                 </div>
                             </div>
                             <div class="col-md-6 col-lg-3 py-3">
                                 <div class="stat-box">
                                     <div class="icon-stat">
-                                        <span class="icon"><img src="img/projects.png"></span><span class="stat">300<strong>+</strong></span>
+                                        <span class="icon"><img src="<?php echo get_theme_mod('stat2_img', ''); ?>" alt="icon"></span><span class="stat"><?php echo get_theme_mod('stat2_num', ''); ?><strong>+</strong></span>
                                     </div>
-                                    <p>Developed Projects
+                                    <p><?php echo get_theme_mod('stat2_title', ''); ?>
                                     </p>
                                 </div>
                             </div>
                             <div class="col-md-6 col-lg-3 py-3">
                                 <div class="stat-box">
                                     <div class="icon-stat">
-                                        <span class="icon"><img src="img/professionals.png"></span><span class="stat">50<strong>+</strong></span>
+                                        <span class="icon"><img src="<?php echo get_theme_mod('stat3_img', ''); ?>" alt="icon"></span><span class="stat"><?php echo get_theme_mod('stat3_num', ''); ?><strong>+</strong></span>
                                     </div>
-                                    <p>Teams of Professionals
+                                    <p><?php echo get_theme_mod('stat3_title', ''); ?>
                                     </p>
                                 </div>
                             </div>
                             <div class="col-md-6 col-lg-3 py-3">
                                 <div class="stat-box">
                                     <div class="icon-stat">
-                                        <span class="icon"><img src="img/technology.png"></span><span class="stat">16<strong>+</strong></span>
+                                        <span class="icon"><img src="<?php echo get_theme_mod('stat4_img', ''); ?>" alt="icon"></span><span class="stat"><?php echo get_theme_mod('stat4_num', ''); ?><strong>+</strong></span>
                                     </div>
-                                    <p>Technologies + Frameworks
+                                    <p><?php echo get_theme_mod('stat4_title', ''); ?>
                                     </p>
                                 </div>
                             </div>
