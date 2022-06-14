@@ -1140,6 +1140,418 @@ if(!function_exists('my_customize_register')){
 
         # statistics section ends
 
+        # testimonial starts
+
+        $wp_customize->add_section('testimonial_section', [
+            'title' => __('Testimonial Section', TEXT_DOMAIN),
+            'description' => __('Add/Update content of Testimonials here', TEXT_DOMAIN),
+            'panel' => 'theme_options'
+        ]);
+
+        //  review1 starts
+        $wp_customize->add_setting( 'avtar1', array(
+            'type'                 => 'theme_mod',
+            'default'              => '',
+            'transport'            => 'refresh', // Options: refresh or postMessage.
+            'capability'           => 'edit_theme_options',
+            'sanitize_callback'    => 'my_sanitize_img'
+        ) );
+
+        
+        $wp_customize->add_control(
+            new WP_Customize_Upload_Control( 
+                $wp_customize, 
+                'avtar1', 
+                array(
+                    'label'      => __( 'Client 1: Avtar/Picture ', TEXT_DOMAIN ),
+                    'description' => __('Recommended size 100px x 100px'),
+                    'section'    => 'testimonial_section',
+                    'settings'   => 'avtar1',
+                    
+                ) ) 
+        );
+        
+
+        $wp_customize->add_setting('review1_name', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('review1_name', [
+            'type' => 'text',
+            'label' => __('Client 1: Name', TEXT_DOMAIN),
+            'section'=> 'testimonial_section'
+        ]);
+
+        $wp_customize->add_setting('review1_busi', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('review1_busi', [
+            'type' => 'text',
+            'label' => __('Client 1: Business', TEXT_DOMAIN),
+            'section'=> 'testimonial_section'
+        ]);
+
+        $wp_customize->add_setting('review1_desc', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('review1_desc', [
+            'type' => 'textarea',
+            'label' => __('Client 1: Description', TEXT_DOMAIN),
+            'section'=> 'testimonial_section'
+        ]);
+        // review1 ends
+
+        //  review2 starts
+        $wp_customize->add_setting( 'avtar2', array(
+            'type'                 => 'theme_mod',
+            'default'              => '',
+            'transport'            => 'refresh', // Options: refresh or postMessage.
+            'capability'           => 'edit_theme_options',
+            'sanitize_callback'    => 'my_sanitize_img'
+        ) );
+
+        
+        $wp_customize->add_control(
+            new WP_Customize_Upload_Control( 
+                $wp_customize, 
+                'avtar2', 
+                array(
+                    'label'      => __( 'Client 2: Avtar/Picture ', TEXT_DOMAIN ),
+                    'description' => __('Recommended size 100px x 100px'),
+                    'section'    => 'testimonial_section',
+                    'settings'   => 'avtar2',
+                    
+                ) ) 
+        );
+        
+
+        $wp_customize->add_setting('review2_name', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('review2_name', [
+            'type' => 'text',
+            'label' => __('Client 2: Name', TEXT_DOMAIN),
+            'section'=> 'testimonial_section'
+        ]);
+
+        $wp_customize->add_setting('review2_busi', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('review2_busi', [
+            'type' => 'text',
+            'label' => __('Client 2: Business', TEXT_DOMAIN),
+            'section'=> 'testimonial_section'
+        ]);
+
+        $wp_customize->add_setting('review2_desc', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('review2_desc', [
+            'type' => 'textarea',
+            'label' => __('Client 1: Description', TEXT_DOMAIN),
+            'section'=> 'testimonial_section'
+        ]);
+        // review2 ends
+
+        //  review3 starts
+        $wp_customize->add_setting( 'avtar3', array(
+            'type'                 => 'theme_mod',
+            'default'              => '',
+            'transport'            => 'refresh', // Options: refresh or postMessage.
+            'capability'           => 'edit_theme_options',
+            'sanitize_callback'    => 'my_sanitize_img'
+        ) );
+
+        
+        $wp_customize->add_control(
+            new WP_Customize_Upload_Control( 
+                $wp_customize, 
+                'avtar3', 
+                array(
+                    'label'      => __( 'Client 3: Avtar/Picture ', TEXT_DOMAIN ),
+                    'description' => __('Recommended size 100px x 100px'),
+                    'section'    => 'testimonial_section',
+                    'settings'   => 'avtar3',
+                    
+                ) ) 
+        );
+        
+
+        $wp_customize->add_setting('review3_name', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('review3_name', [
+            'type' => 'text',
+            'label' => __('Client 3: Name', TEXT_DOMAIN),
+            'section'=> 'testimonial_section'
+        ]);
+
+        $wp_customize->add_setting('review3_busi', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('review3_busi', [
+            'type' => 'text',
+            'label' => __('Client 3: Business', TEXT_DOMAIN),
+            'section'=> 'testimonial_section'
+        ]);
+
+        $wp_customize->add_setting('review3_desc', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('review3_desc', [
+            'type' => 'textarea',
+            'label' => __('Client 3: Description', TEXT_DOMAIN),
+            'section'=> 'testimonial_section'
+        ]);
+        // review3 ends
+
+        //  review4 starts
+        $wp_customize->add_setting( 'avtar4', array(
+            'type'                 => 'theme_mod',
+            'default'              => '',
+            'transport'            => 'refresh', // Options: refresh or postMessage.
+            'capability'           => 'edit_theme_options',
+            'sanitize_callback'    => 'my_sanitize_img'
+        ) );
+
+        
+        $wp_customize->add_control(
+            new WP_Customize_Upload_Control( 
+                $wp_customize, 
+                'avtar4', 
+                array(
+                    'label'      => __( 'Client 4: Avtar/Picture ', TEXT_DOMAIN ),
+                    'description' => __('Recommended size 100px x 100px'),
+                    'section'    => 'testimonial_section',
+                    'settings'   => 'avtar4',
+                    
+                ) ) 
+        );
+        
+
+        $wp_customize->add_setting('review4_name', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('review4_name', [
+            'type' => 'text',
+            'label' => __('Client 4: Name', TEXT_DOMAIN),
+            'section'=> 'testimonial_section'
+        ]);
+
+        $wp_customize->add_setting('review4_busi', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('review4_busi', [
+            'type' => 'text',
+            'label' => __('Client 4: Business', TEXT_DOMAIN),
+            'section'=> 'testimonial_section'
+        ]);
+
+        $wp_customize->add_setting('review4_desc', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('review4_desc', [
+            'type' => 'textarea',
+            'label' => __('Client 4: Description', TEXT_DOMAIN),
+            'section'=> 'testimonial_section'
+        ]);
+        // review4 ends
+
+        //  review5 starts
+        $wp_customize->add_setting( 'avtar5', array(
+            'type'                 => 'theme_mod',
+            'default'              => '',
+            'transport'            => 'refresh', // Options: refresh or postMessage.
+            'capability'           => 'edit_theme_options',
+            'sanitize_callback'    => 'my_sanitize_img'
+        ) );
+
+        
+        $wp_customize->add_control(
+            new WP_Customize_Upload_Control( 
+                $wp_customize, 
+                'avtar5', 
+                array(
+                    'label'      => __( 'Client 5: Avtar/Picture ', TEXT_DOMAIN ),
+                    'description' => __('Recommended size 100px x 100px'),
+                    'section'    => 'testimonial_section',
+                    'settings'   => 'avtar5',
+                    
+                ) ) 
+        );
+        
+
+        $wp_customize->add_setting('review5_name', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('review5_name', [
+            'type' => 'text',
+            'label' => __('Client 5: Name', TEXT_DOMAIN),
+            'section'=> 'testimonial_section'
+        ]);
+
+        $wp_customize->add_setting('review5_busi', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('review5_busi', [
+            'type' => 'text',
+            'label' => __('Client 5: Business', TEXT_DOMAIN),
+            'section'=> 'testimonial_section'
+        ]);
+
+        $wp_customize->add_setting('review5_desc', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('review5_desc', [
+            'type' => 'textarea',
+            'label' => __('Client 5: Description', TEXT_DOMAIN),
+            'section'=> 'testimonial_section'
+        ]);
+        // review5 ends
+
+        //  review6 starts
+        $wp_customize->add_setting( 'avtar6', array(
+            'type'                 => 'theme_mod',
+            'default'              => '',
+            'transport'            => 'refresh', // Options: refresh or postMessage.
+            'capability'           => 'edit_theme_options',
+            'sanitize_callback'    => 'my_sanitize_img'
+        ) );
+
+        
+        $wp_customize->add_control(
+            new WP_Customize_Upload_Control( 
+                $wp_customize, 
+                'avtar6', 
+                array(
+                    'label'      => __( 'Client 6: Avtar/Picture ', TEXT_DOMAIN ),
+                    'description' => __('Recommended size 100px x 100px'),
+                    'section'    => 'testimonial_section',
+                    'settings'   => 'avtar6',
+                    
+                ) ) 
+        );
+        
+
+        $wp_customize->add_setting('review6_name', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('review6_name', [
+            'type' => 'text',
+            'label' => __('Client 6: Name', TEXT_DOMAIN),
+            'section'=> 'testimonial_section'
+        ]);
+
+        $wp_customize->add_setting('review6_busi', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('review6_busi', [
+            'type' => 'text',
+            'label' => __('Client 6: Business', TEXT_DOMAIN),
+            'section'=> 'testimonial_section'
+        ]);
+
+        $wp_customize->add_setting('review6_desc', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('review6_desc', [
+            'type' => 'textarea',
+            'label' => __('Client 6: Description', TEXT_DOMAIN),
+            'section'=> 'testimonial_section'
+        ]);
+        // review6 ends
+
+        # testimonial ends
+
     }
 
     add_action( 'customize_register', 'my_customize_register' );

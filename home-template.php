@@ -268,55 +268,66 @@ $stat_bg =  get_theme_mod('stat_bg', '');
                     <div class="stack">
                         <div class="sheet">
                             <div class="sheet-wrapper">
-                                <span class="test-avtar"><img src="img/test-avtar-1.jpg" alt="avtar 1" /></span>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi debitis quia reprehenderit, tempore magnam voluptas alias totam dolor, voluptate obcaecati quibusdam! Voluptatem libero qui velit omnis eum. Consequuntur, omnis in?</p>
+                                <span class="test-avtar"><img src="<?php echo get_theme_mod('avtar1'); ?>" alt="avtar 1" /></span>
+                                <p><?php echo get_theme_mod('review1_desc', ''); ?></p>
                                 <div class="test-credits">
-                                    <h5>Name</h5>
-                                    <p>business name</p>
+                                    <h5><?php echo get_theme_mod('review1_name', ''); ?></h5>
+                                    <p><?php echo get_theme_mod('review1_busi', ''); ?></p>
                                 </div>
                             </div>
                         </div>
         
                         <div class="sheet">
                             <div class="sheet-wrapper">
-                                <span class="test-avtar"><img src="img/test-avtar-2.jpg" alt="avtar 2" /></span>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi debitis quia reprehenderit, tempore magnam voluptas alias totam dolor, voluptate obcaecati quibusdam! Voluptatem libero qui velit omnis eum. Consequuntur, omnis in?</p>
+                                <span class="test-avtar"><img src="<?php echo get_theme_mod('avtar2'); ?>" alt="avtar 2" /></span>
+                                <p><?php echo get_theme_mod('review2_desc', ''); ?></p>
                                 <div class="test-credits">
-                                    <h5>Name</h5>
-                                    <p>business name</p>
+                                    <h5><?php echo get_theme_mod('review2_name', ''); ?></h5>
+                                    <p><?php echo get_theme_mod('review2_busi', ''); ?></p>
                                 </div>
                             </div>
                         </div>
         
                         <div class="sheet">
                             <div class="sheet-wrapper">
-                                <span class="test-avtar"><img src="img/test-avtar-3.jpg" alt="avtar 3" /></span>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi debitis quia reprehenderit, tempore magnam voluptas alias totam dolor, voluptate obcaecati quibusdam! Voluptatem libero qui velit omnis eum. Consequuntur, omnis in?</p>
+                                <span class="test-avtar"><img src="<?php echo get_theme_mod('avtar3'); ?>" alt="avtar 3" /></span>
+                                <p><?php echo get_theme_mod('review3_desc', ''); ?></p>
                                 <div class="test-credits">
-                                    <h5>Name</h5>
-                                    <p>business name</p>
+                                    <h5><?php echo get_theme_mod('review3_name', ''); ?></h5>
+                                    <p><?php echo get_theme_mod('review3_busi', ''); ?></p>
                                 </div>
                             </div>
                         </div>
         
                         <div class="sheet">
                             <div class="sheet-wrapper">
-                                <span class="test-avtar"><img src="img/test-avtar-1.jpg" alt="avtar 1" /></span>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi debitis quia reprehenderit, tempore magnam voluptas alias totam dolor, voluptate obcaecati quibusdam! Voluptatem libero qui velit omnis eum. Consequuntur, omnis in?</p>
+                                <span class="test-avtar"><img src="<?php echo get_theme_mod('avtar4'); ?>" alt="avtar 4" /></span>
+                                <p><?php echo get_theme_mod('review4_desc', ''); ?></p>
                                 <div class="test-credits">
-                                    <h5>Name</h5>
-                                    <p>business name</p>
+                                    <h5><?php echo get_theme_mod('review4_name', ''); ?></h5>
+                                    <p><?php echo get_theme_mod('review4_busi', ''); ?></p>
                                 </div>
                             </div>
                         </div>
         
                         <div class="sheet">
                             <div class="sheet-wrapper">
-                                <span class="test-avtar"><img src="img/test-avtar-1.jpg" alt="avtar 1" /></span>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi debitis quia reprehenderit, tempore magnam voluptas alias totam dolor, voluptate obcaecati quibusdam! Voluptatem libero qui velit omnis eum. Consequuntur, omnis in?</p>
+                                <span class="test-avtar"><img src="<?php echo get_theme_mod('avtar5'); ?>" alt="avtar 5" /></span>
+                                <p><?php echo get_theme_mod('review5_desc', ''); ?></p>
                                 <div class="test-credits">
-                                    <h5>Name</h5>
-                                    <p>business name</p>
+                                    <h5><?php echo get_theme_mod('review5_name', ''); ?></h5>
+                                    <p><?php echo get_theme_mod('review5_busi', ''); ?></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sheet">
+                            <div class="sheet-wrapper">
+                                <span class="test-avtar"><img src="<?php echo get_theme_mod('avtar6'); ?>" alt="avtar 6" /></span>
+                                <p><?php echo get_theme_mod('review6_desc', ''); ?></p>
+                                <div class="test-credits">
+                                    <h5><?php echo get_theme_mod('review6_name', ''); ?></h5>
+                                    <p><?php echo get_theme_mod('review6_busi', ''); ?></p>
                                 </div>
                             </div>
                         </div>
