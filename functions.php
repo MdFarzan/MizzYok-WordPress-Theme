@@ -1552,6 +1552,71 @@ if(!function_exists('my_customize_register')){
 
         # testimonial ends
 
+        # cta starts
+        $wp_customize->add_section('cta_section', [
+            'title' => __('CTA', TEXT_DOMAIN),
+            'description' => __('Add/Update content of CTA here', TEXT_DOMAIN),
+            'panel' => 'theme_options'
+        ]);
+
+        $wp_customize->add_setting('cta_title', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('cta_title', [
+            'type' => 'text',
+            'label' => __('CTA Title', TEXT_DOMAIN),
+            'section'=> 'cta_section'
+        ]);
+
+        $wp_customize->add_setting('cta_desc', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('cta_desc', [
+            'type' => 'textarea',
+            'label' => __('Descripition', TEXT_DOMAIN),
+            'section'=> 'cta_section'
+        ]);
+
+        $wp_customize->add_setting('cta_btn_link', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'sanitize_url_text'
+        ]);
+
+        $wp_customize->add_control('cta_btn_link', [
+            'type' => 'text',
+            'label' => __('CTA Link', TEXT_DOMAIN),
+            'section'=> 'cta_section'
+        ]);
+
+        $wp_customize->add_setting('cta_btn_label', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('cta_btn_label', [
+            'type' => 'text',
+            'label' => __('CTA Label', TEXT_DOMAIN),
+            'section'=> 'cta_section'
+        ]);
+
+        # cta ends
+
     }
 
     add_action( 'customize_register', 'my_customize_register' );

@@ -344,11 +344,11 @@ $stat_bg =  get_theme_mod('stat_bg', '');
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8 col-lg-8 text-center text-md-start">
-                            <h3>Lorem ipsum dolor sit amet</h3>
-                            <p> consectetur adipisicing elit Id consequatur in ab placeat officiis nesciunt dolorem.</p>
+                            <h3><?php echo get_theme_mod('cta_title', ''); ?></h3>
+                            <p> <?php echo get_theme_mod('cta_desc', ''); ?></p>
                         </div>
                         <div class="col-md-4 col-lg-4 d-flex justify-content-end align-items-center justify-content-center">
-                            <a class="prim-btn sec-btn mt-4 mt-md-0"><span class="btn-text">Contact Us</span></a>
+                            <a href="<?php echo get_theme_mod('cta_btn_link', ''); ?>" class="prim-btn sec-btn mt-4 mt-md-0"><span class="btn-text"><?php echo get_theme_mod('cta_btn_label', 'Button Label'); ?></span></a>
                         </div>
                     </div>
                 </div>
