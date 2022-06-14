@@ -420,6 +420,479 @@ if(!function_exists('my_customize_register')){
 
         #about section ends
 
+        #service section starts
+        
+        $wp_customize->add_section('services_section', [
+            'title' => __('Services Section', TEXT_DOMAIN),
+            'description' => __('Add/Update content of services section here', TEXT_DOMAIN),
+            'panel' => 'theme_options'
+        ]);
+
+
+        $wp_customize->add_setting('service_sub_title', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('service_sub_title', [
+            'type' => 'text',
+            'label' => __('Sub Title', TEXT_DOMAIN),
+            'section'=> 'services_section'
+        ]);
+
+
+        $wp_customize->add_setting('service_title', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('service_title', [
+            'type' => 'text',
+            'label' => __('Title', TEXT_DOMAIN),
+            'section'=> 'services_section'
+        ]);
+
+        $wp_customize->add_setting('services_desc', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('services_desc', [
+            'type' => 'textarea',
+            'label' => __('Description', TEXT_DOMAIN),
+            'section'=> 'services_section'
+        ]);
+
+        // service 1 starts
+
+        $wp_customize->add_setting('service1_title', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('service1_title', [
+            'type' => 'text',
+            'label' => __('Service-1: Title', TEXT_DOMAIN),
+            'section'=> 'services_section'
+        ]);
+
+
+
+        $wp_customize->add_setting('service1_desc', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('service1_desc', [
+            'type' => 'textarea',
+            'label' => __('Service-1: Description', TEXT_DOMAIN),
+            'section'=> 'services_section'
+        ]);
+
+        $wp_customize->add_setting( 'service1_img', array(
+            'type'                 => 'theme_mod',
+            'default'              => '',
+            'transport'            => 'refresh', // Options: refresh or postMessage.
+            'capability'           => 'edit_theme_options',
+            'sanitize_callback'    => 'my_sanitize_img'
+        ) );
+
+        
+        $wp_customize->add_control(
+            new WP_Customize_Upload_Control( 
+                $wp_customize, 
+                'service1_img', 
+                array(
+                    'label'      => __( 'Service:1 Image', TEXT_DOMAIN ),
+                    'description' => __('Recommended size 512px x 512px'),
+                    'section'    => 'services_section',
+                    'settings'   => 'service1_img',
+                    
+                ) ) 
+        );
+
+        $wp_customize->add_setting('service1_btn_link', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('service1_btn_link', [
+            'type' => 'text',
+            'label' => __('Service 1: Link', TEXT_DOMAIN),
+            'section'=> 'services_section'
+        ]);
+
+        // service 1 ends
+
+        // service 2 starts
+
+        $wp_customize->add_setting('service2_title', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('service2_title', [
+            'type' => 'text',
+            'label' => __('Service-2: Title', TEXT_DOMAIN),
+            'section'=> 'services_section'
+        ]);
+
+
+
+        $wp_customize->add_setting('service2_desc', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('service2_desc', [
+            'type' => 'textarea',
+            'label' => __('Service-2: Description', TEXT_DOMAIN),
+            'section'=> 'services_section'
+        ]);
+
+        $wp_customize->add_setting( 'service2_img', array(
+            'type'                 => 'theme_mod',
+            'default'              => '',
+            'transport'            => 'refresh', // Options: refresh or postMessage.
+            'capability'           => 'edit_theme_options',
+            'sanitize_callback'    => 'my_sanitize_img'
+        ) );
+
+        
+        $wp_customize->add_control(
+            new WP_Customize_Upload_Control( 
+                $wp_customize, 
+                'service2_img', 
+                array(
+                    'label'      => __( 'Service:2 Image', TEXT_DOMAIN ),
+                    'description' => __('Recommended size 512px x 512px'),
+                    'section'    => 'services_section',
+                    'settings'   => 'service2_img',
+                    
+                ) ) 
+        );
+
+        $wp_customize->add_setting('service2_btn_link', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('service2_btn_link', [
+            'type' => 'text',
+            'label' => __('Service 2: Link', TEXT_DOMAIN),
+            'section'=> 'services_section'
+        ]);
+
+        // service 2 ends
+
+        // service 3 starts
+
+        $wp_customize->add_setting('service3_title', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('service3_title', [
+            'type' => 'text',
+            'label' => __('Service-3: Title', TEXT_DOMAIN),
+            'section'=> 'services_section'
+        ]);
+
+
+
+        $wp_customize->add_setting('service3_desc', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('service3_desc', [
+            'type' => 'textarea',
+            'label' => __('Service-3: Description', TEXT_DOMAIN),
+            'section'=> 'services_section'
+        ]);
+
+        $wp_customize->add_setting( 'service3_img', array(
+            'type'                 => 'theme_mod',
+            'default'              => '',
+            'transport'            => 'refresh', // Options: refresh or postMessage.
+            'capability'           => 'edit_theme_options',
+            'sanitize_callback'    => 'my_sanitize_img'
+        ) );
+
+        
+        $wp_customize->add_control(
+            new WP_Customize_Upload_Control( 
+                $wp_customize, 
+                'service3_img', 
+                array(
+                    'label'      => __( 'Service:3 Image', TEXT_DOMAIN ),
+                    'description' => __('Recommended size 512px x 512px'),
+                    'section'    => 'services_section',
+                    'settings'   => 'service3_img',
+                    
+                ) ) 
+        );
+
+        $wp_customize->add_setting('service3_btn_link', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('service3_btn_link', [
+            'type' => 'text',
+            'label' => __('Service 3: Link', TEXT_DOMAIN),
+            'section'=> 'services_section'
+        ]);
+
+        // service 3 ends
+
+        // service 4 starts
+
+        $wp_customize->add_setting('service4_title', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('service4_title', [
+            'type' => 'text',
+            'label' => __('Service-4: Title', TEXT_DOMAIN),
+            'section'=> 'services_section'
+        ]);
+
+
+
+        $wp_customize->add_setting('service4_desc', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('service4_desc', [
+            'type' => 'textarea',
+            'label' => __('Service-4: Description', TEXT_DOMAIN),
+            'section'=> 'services_section'
+        ]);
+
+        $wp_customize->add_setting( 'service4_img', array(
+            'type'                 => 'theme_mod',
+            'default'              => '',
+            'transport'            => 'refresh', // Options: refresh or postMessage.
+            'capability'           => 'edit_theme_options',
+            'sanitize_callback'    => 'my_sanitize_img'
+        ) );
+
+        
+        $wp_customize->add_control(
+            new WP_Customize_Upload_Control( 
+                $wp_customize, 
+                'service4_img', 
+                array(
+                    'label'      => __( 'Service:4 Image', TEXT_DOMAIN ),
+                    'description' => __('Recommended size 512px x 512px'),
+                    'section'    => 'services_section',
+                    'settings'   => 'service4_img',
+                    
+                ) ) 
+        );
+
+        $wp_customize->add_setting('service4_btn_link', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('service4_btn_link', [
+            'type' => 'text',
+            'label' => __('Service 4: Link', TEXT_DOMAIN),
+            'section'=> 'services_section'
+        ]);
+
+        // service 4 ends
+
+        // service 5 starts
+
+        $wp_customize->add_setting('service5_title', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('service5_title', [
+            'type' => 'text',
+            'label' => __('Service-5: Title', TEXT_DOMAIN),
+            'section'=> 'services_section'
+        ]);
+
+
+
+        $wp_customize->add_setting('service5_desc', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('service5_desc', [
+            'type' => 'textarea',
+            'label' => __('Service-5: Description', TEXT_DOMAIN),
+            'section'=> 'services_section'
+        ]);
+
+        $wp_customize->add_setting( 'service5_img', array(
+            'type'                 => 'theme_mod',
+            'default'              => '',
+            'transport'            => 'refresh', // Options: refresh or postMessage.
+            'capability'           => 'edit_theme_options',
+            'sanitize_callback'    => 'my_sanitize_img'
+        ) );
+
+        
+        $wp_customize->add_control(
+            new WP_Customize_Upload_Control( 
+                $wp_customize, 
+                'service5_img', 
+                array(
+                    'label'      => __( 'Service:5 Image', TEXT_DOMAIN ),
+                    'description' => __('Recommended size 512px x 512px'),
+                    'section'    => 'services_section',
+                    'settings'   => 'service5_img',
+                    
+                ) ) 
+        );
+
+        $wp_customize->add_setting('service5_btn_link', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('service5_btn_link', [
+            'type' => 'text',
+            'label' => __('Service 5: Link', TEXT_DOMAIN),
+            'section'=> 'services_section'
+        ]);
+
+        // service 5 ends
+
+        // service 6 starts
+
+        $wp_customize->add_setting('service6_title', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('service6_title', [
+            'type' => 'text',
+            'label' => __('Service-6: Title', TEXT_DOMAIN),
+            'section'=> 'services_section'
+        ]);
+
+
+
+        $wp_customize->add_setting('service6_desc', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('service6_desc', [
+            'type' => 'textarea',
+            'label' => __('Service-6: Description', TEXT_DOMAIN),
+            'section'=> 'services_section'
+        ]);
+
+        $wp_customize->add_setting( 'service6_img', array(
+            'type'                 => 'theme_mod',
+            'default'              => '',
+            'transport'            => 'refresh', // Options: refresh or postMessage.
+            'capability'           => 'edit_theme_options',
+            'sanitize_callback'    => 'my_sanitize_img'
+        ) );
+
+        
+        $wp_customize->add_control(
+            new WP_Customize_Upload_Control( 
+                $wp_customize, 
+                'service6_img', 
+                array(
+                    'label'      => __( 'Service:6 Image', TEXT_DOMAIN ),
+                    'description' => __('Recommended size 512px x 512px'),
+                    'section'    => 'services_section',
+                    'settings'   => 'service6_img',
+                    
+                ) ) 
+        );
+
+        $wp_customize->add_setting('service6_btn_link', [
+            'type' => 'theme_mod',
+            'default' => '',
+            'transport' => 'refresh',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ]);
+
+        $wp_customize->add_control('service6_btn_link', [
+            'type' => 'text',
+            'label' => __('Service 6: Link', TEXT_DOMAIN),
+            'section'=> 'services_section'
+        ]);
+
+        // service 6 ends
+        #sevice section ends
+        
 
     }
 

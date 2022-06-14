@@ -117,9 +117,11 @@ require_once('constant.php');
         <section class="services">
             <div class="container">
                 <div class="sec-title title-center">
-                    <span class="sub-heading">Do you know that</span>
-                    <h2>Services</h2>
-                    <p class="sec-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, quas. Id error totam iusto exercitationem dignissimos ipsam dicta corrupti, rem accusantium delectus, sint inventore iure praesentium ipsa earum officiis quod.</p>
+                    <span class="sub-heading"><?php echo get_theme_mod('service_sub_title', ''); ?></span>
+                    <h2><?php echo get_theme_mod('service_title', ''); ?></h2>
+                    <p class="sec-desc">
+                        <?php echo get_theme_mod('services_desc', ''); ?>
+                    </p>
                 </div>
                 <div class="services">
                     <div class="row">
@@ -129,12 +131,12 @@ require_once('constant.php');
                                 <span class="corner left-left"></span>
                                 <span class="corner bottom-bottom"></span>
                                 <span class="corner right-right"></span>
-                                <span class="icon"><img src="img/web-design.png" alt=""></span>
-                                <h3>Web Design</h3>
+                                <span class="icon"><img src="<?php echo get_theme_mod('service1_img', ''); ?>" alt="icon"></span>
+                                <h3><?php echo get_theme_mod('service1_title', ''); ?></h3>
                                 <p class="service-desc">
-                                    Take your business online with- Responsive Website.Give your business a online boost with our creative designs of responsive websites. 
+                                <?php echo get_theme_mod('service1_desc', ''); ?>
                                 </p>
-                                <a href="#">Read More</a>
+                                <a href="<?php echo get_theme_mod('service1_btn_link', '#'); ?>">Read More</a>
                             </div>
                         </div>
                         <div class="col-md-6 col-xl-4">
@@ -143,12 +145,12 @@ require_once('constant.php');
                                 <span class="corner left-left"></span>
                                 <span class="corner bottom-bottom"></span>
                                 <span class="corner right-right"></span>
-                                <span class="icon"><img src="img/web-portal.png" alt=""></span>
-                                <h3>Web Portal</h3>
+                                <span class="icon"><img src="<?php echo get_theme_mod('service2_img', ''); ?>" alt="icon"></span>
+                                <h3><?php echo get_theme_mod('service2_title', ''); ?></h3>
                                 <p class="service-desc">
-                                    Take your business online with- Responsive Website.Give your business a online boost with our creative designs of responsive websites. 
+                                <?php echo get_theme_mod('service2_desc', ''); ?>
                                 </p>
-                                <a href="#">Read More</a>
+                                <a href="<?php echo get_theme_mod('service2_btn_link', '#'); ?>">Read More</a>
                             </div>
                         </div>
                         <div class="col-md-6 col-xl-4">
@@ -157,12 +159,12 @@ require_once('constant.php');
                                 <span class="corner left-left"></span>
                                 <span class="corner bottom-bottom"></span>
                                 <span class="corner right-right"></span>
-                                <span class="icon"><img src="img/sms-marketing.png" alt=""></span>
-                                <h3>SMS Marketing</h3>
+                                <span class="icon"><img src="<?php echo get_theme_mod('service3_img', ''); ?>" alt="icon"></span>
+                                <h3><?php echo get_theme_mod('service3_title', ''); ?></h3>
                                 <p class="service-desc">
-                                    Take your business online with- Responsive Website.Give your business a online boost with our creative designs of responsive websites. 
+                                    <?php echo get_theme_mod('service3_desc', ''); ?>
                                 </p>
-                                <a href="#">Read More</a>
+                                <a href="<?php echo get_theme_mod('service3_btn_link', '#'); ?>">Read More</a>
                             </div>
                         </div>
                         <div class="col-md-6 col-xl-4">
@@ -171,12 +173,12 @@ require_once('constant.php');
                                 <span class="corner left-left"></span>
                                 <span class="corner bottom-bottom"></span>
                                 <span class="corner right-right"></span>
-                                <span class="icon"><img src="img/ecommerce-site.png" alt=""></span>
-                                <h3>eCommerce Site</h3>
+                                <span class="icon"><img src="<?php echo get_theme_mod('service4_img', ''); ?>" alt="icon"></span>
+                                <h3><?php echo get_theme_mod('service4_title', ''); ?></h3>
                                 <p class="service-desc">
-                                    Take your business online with- Responsive Website.Give your business a online boost with our creative designs of responsive websites. 
+                                <?php echo get_theme_mod('service4_desc', ''); ?>
                                 </p>
-                                <a href="#">Read More</a>
+                                <a href="<?php echo get_theme_mod('service4_btn_link','#'); ?>">Read More</a>
                             </div>
                         </div>
                         <div class="col-md-6 col-xl-4">
@@ -185,12 +187,12 @@ require_once('constant.php');
                                 <span class="corner left-left"></span>
                                 <span class="corner bottom-bottom"></span>
                                 <span class="corner right-right"></span>
-                                <span class="icon"><img src="img/mobile-app.png" alt=""></span>
-                                <h3>Mobile Application</h3>
+                                <span class="icon"><img src="<?php echo get_theme_mod('service5_img', ''); ?>" alt="icon"></span>
+                                <h3><?php echo get_theme_mod('service5_title', ''); ?></h3>
                                 <p class="service-desc">
-                                    Take your business online with- Responsive Website.Give your business a online boost with our creative designs of responsive websites. 
+                                <?php echo get_theme_mod('service5_desc', ''); ?>
                                 </p>
-                                <a href="#">Read More</a>
+                                <a href="<?php echo get_theme_mod('service5_btn_link', '#'); ?>">Read More</a>
                             </div>
                         </div>
                         <div class="col-md-6 col-xl-4">
@@ -199,12 +201,12 @@ require_once('constant.php');
                                 <span class="corner left-left"></span>
                                 <span class="corner bottom-bottom"></span>
                                 <span class="corner right-right"></span>
-                                <span class="icon"><img src="img/digital-marketing.png" alt=""></span>
-                                <h3>Digital Marketing</h3>
+                                <span class="icon"><img src="<?php echo get_theme_mod('service6_img', ''); ?>" alt="icon"></span>
+                                <h3><?php echo get_theme_mod('service6_title', ''); ?></h3>
                                 <p class="service-desc">
-                                    Take your business online with- Responsive Website.Give your business a online boost with our creative designs of responsive websites. 
+                                    <?php echo get_theme_mod('service6_desc', ''); ?>
                                 </p>
-                                <a href="#">Read More</a>
+                                <a href="<?php echo get_theme_mod('service6_btn_link', '#'); ?>">Read More</a>
                             </div>
                         </div>
                         
