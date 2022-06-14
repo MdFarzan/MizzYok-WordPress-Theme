@@ -137,5 +137,197 @@ add_filter( 'nav_menu_css_class', function($classes) {
     return $classes;
 }, 10, 1 );
 
+
+
+// customizing functionality
+if(!function_exists('my_customize_register')){
+
+    function my_customize_register($wp_customize){
+
+        // adding panel for theme options
+        $wp_customize->add_panel('theme_options', [
+            'title' => 'Theme Options',
+            'Description' => 'Add content in your theme here',
+            'priority' => 40,
+            'capability'     => 'edit_theme_options'
+        ]);
+
+        # hero section starts
+        $wp_customize->add_section('hero_section', [
+            'title' => __('Hero Section', TEXT_DOMAIN),
+            'description' => __('Add/Update content of Hero section here', TEXT_DOMAIN),
+            'panel' => 'theme_options'
+        ]);
+
+
+        $wp_customize->add_setting( 'hero_heading', array(
+            'type'                 => 'theme_mod',
+            'default'              => 'We Create <br> Your Brand, Your Story',
+            'transport'            => 'refresh', // Options: refresh or postMessage.
+            'capability'           => 'edit_theme_options',
+            'sanitize_callback'    => 'sanitize_url_text'
+        ) );
+
+        
+        $wp_customize->add_control( 'hero_heading', array(
+            'label'       => __( 'Hero title', TEXT_DOMAIN ),
+            'section'     => 'hero_section',
+            'type'        => 'text'
+        ) );
+
+
+        $wp_customize->add_setting( 'hero_desc', array(
+            'type'                 => 'theme_mod',
+            'default'              => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo nisi quisquam architecto ab cumque atque consequuntur.',
+            'transport'            => 'refresh', // Options: refresh or postMessage.
+            'capability'           => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ) );
+
+        
+        $wp_customize->add_control( 'hero_desc', array(
+            'label'       => __( 'Hero Description', TEXT_DOMAIN ),
+            'section'     => 'hero_section',
+            'type'        => 'textarea'
+        ) );
+
+
+        // Setting: Checkbox.
+        $wp_customize->add_setting( 'cta_btn', array(
+            'type'                 => 'theme_mod',
+            'default'              => 'enable',
+            'transport'            => 'refresh', 
+            'capability'           => 'edit_theme_options',
+            'sanitize_callback'    => '' 
+        ) );
+
+        // continue from sanitizing checkbox
+        // Control: Checkbox.
+        $wp_customize->add_control( 'cta_btn', array(
+            'label'       => __( 'Show CTA button', TEXT_DOMAIN ),
+            'description' => __( 'Show/Hide CTA button', TEXT_DOMAIN ),
+            'section'     => 'hero_section',
+            'type'        => 'checkbox'
+        ) );
+
+        $wp_customize->add_setting( 'cta_label', array(
+            'type'                 => 'theme_mod',
+            'default'              => 'BUTTON TEXT',
+            'transport'            => 'refresh', // Options: refresh or postMessage.
+            'capability'           => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ) );
+
+        
+        $wp_customize->add_control( 'cta_label', array(
+            'label'       => __( 'CTA button Label', TEXT_DOMAIN ),
+            'section'     => 'hero_section',
+            'type'        => 'text'
+        ) );
+
+        $wp_customize->add_setting( 'cta_link', array(
+            'type'                 => 'theme_mod',
+            'default'              => '#',
+            'transport'            => 'refresh', // Options: refresh or postMessage.
+            'capability'           => 'edit_theme_options',
+            'sanitize_callback'    => 'esc_url_raw'
+        ) );
+
+        
+        $wp_customize->add_control( 'cta_link', array(
+            'label'       => __( 'CTA button link', TEXT_DOMAIN ),
+            'section'     => 'hero_section',
+            'type'        => 'text'
+        ) );
+
+
+        $wp_customize->add_setting( 'hero_img', array(
+            'type'                 => 'theme_mod',
+            'default'              => '',
+            'transport'            => 'refresh', // Options: refresh or postMessage.
+            'capability'           => 'edit_theme_options',
+            'sanitize_callback'    => 'my_sanitize_img'
+        ) );
+
+        
+        $wp_customize->add_control(
+            new WP_Customize_Upload_Control( 
+                $wp_customize, 
+                'hero_img', 
+                array(
+                    'label'      => __( 'Hero Image', TEXT_DOMAIN ),
+                    'description' => __('Recommended size 620px x 542px'),
+                    'section'    => 'hero_section',
+                    'settings'   => 'hero_img',
+                    
+                ) ) 
+        );
+
+        $wp_customize->add_setting( 'hero_img_alt', array(
+            'type'                 => 'theme_mod',
+            'default'              => 'image',
+            'transport'            => 'refresh', // Options: refresh or postMessage.
+            'capability'           => 'edit_theme_options',
+            'sanitize_callback'    => 'wp_filter_nohtml_kses'
+        ) );
+
+        
+        $wp_customize->add_control( 'hero_img_alt', array(
+            'label'       => __( 'Image ALT text', TEXT_DOMAIN ),
+            'section'     => 'hero_section',
+            'type'        => 'text'
+        ) );
+
+        
+
+        #hero section ends
+
+
+    }
+
+    add_action( 'customize_register', 'my_customize_register' );
+
+}
+
+
+// sanitizing functions
+
+if(!function_exists('sanitize_url_text')){
+    function sanitize_url_text($text){
+        return $text;
+    }
+}
+
+
+if(!function_exists('my_sanitize_checkbox')){
+
+    function my_sanitize_checkbox($input){
+        return ( isset( $input ) ? true : false );
+        
+    }
+
+}
+
+if(!function_exists('my_sanitize_img')){
+
+    function my_sanitize_img($file, $setting){
+
+        //allowed file types
+        $mimes = array(
+            'jpg|jpeg|jpe' => 'image/jpeg',
+            'gif'          => 'image/gif',
+            'png'          => 'image/png'
+        );
+        
+        //check file type from file name
+        $file_ext = wp_check_filetype( $file, $mimes );
+        
+        //if file has a valid mime type return it, otherwise return default
+        return ( $file_ext['ext'] ? $file : $setting->default );
+
+    }
+
+}
+
 ?>
 
