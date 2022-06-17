@@ -586,6 +586,20 @@ footer{
 	padding-bottom: 0px;
 }
 
+
+footer .widget-title {
+    font-size: 20px;
+}
+
+footer ul {
+    list-style-type: none;
+    padding-left: 1px;
+}
+
+footer .nav-link, footer a, footer p {
+    color: #fff;
+}
+
 @media (max-width:991px){
 	.hero #navbarNav {
 		margin-top: 20px;

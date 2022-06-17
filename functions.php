@@ -44,7 +44,7 @@ if(!function_exists('my_reg_sidebars')){
         register_sidebar( array(
             'name'          => __( 'Footer', TEXT_DOMAIN ),
             'id'            => 'footer-widgets',
-            'before_widget' => '<div id="%1$s" class="col-md-4 col-lg-3 %2$s">',
+            'before_widget' => '<div id="%1$s" class="col-md-6 col-lg-3 %2$s py-3 py-md-1 text-sm-center text-md-start">',
             'after_widget'  => '</div>',
             'before_title'  => '<h3 class="widget-title">',
             'after_title'   => '</h3>',
