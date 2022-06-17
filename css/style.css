@@ -587,7 +587,7 @@ footer{
 }
 
 
-footer .widget-title {
+.widget-title {
     font-size: 20px;
 }
 
@@ -641,7 +641,20 @@ footer .nav-link, footer a, footer p {
 
 .artcl-title {
     font-size: 22px;
-    padding: 20px 10px 5px;
+    padding: 10px 10px 15px;
+	margin:0 !important;
+}
+
+.artcl-meta{
+	padding:10px 10px;
+}
+
+.artcl-meta .date{
+	color:var(--s-color);
+}
+
+.artcl-meta .date, .artcl-meta .author{
+	width:100%;
 }
 
 .artcl-desc{
@@ -649,7 +662,7 @@ footer .nav-link, footer a, footer p {
 }
 
 .read-more-con{
-	margin-top:25px;
+	margin-top:10px;
 }
 .read-more-btn {
     background: #fff;
@@ -670,6 +683,52 @@ footer .nav-link, footer a, footer p {
 
 .artcl-wrap {
     padding-bottom: 25px;
+}
+
+
+p img, img {
+    width: 100%;
+    height: auto;
+}
+
+.page-content-wrap h1, .page-content-wrap h2, .page-content-wrap h3, .page-content-wrap h4, .page-content-wrap h5, .page-content-wrap h6{
+	margin:25px 0px 15px;
+}
+
+table{
+	width:100%;
+}
+
+input[type=submit], button{
+	border-radius: 0;
+	border:1px solid var(--s-color);
+	font-family: var(--s-font);
+	color:#fff;
+	background-color:var(--p-color);
+	font-size:16px;
+	padding:5px 10px;
+	transition:300ms;
+}
+
+input[type=submit]:hover, button:hover{
+	background-color:var(--s-color);
+	color:var(--p-color);
+}
+
+input, textarea{
+	border:1px solid var(--s-color);
+	padding:5px 10px;
+	border-radius: 0;
+	outline:none;
+	font-family: var(--p-font);
+}
+
+textarea:focus, input:focus{
+	outline:1px solid var(--s-color);
+}
+
+textarea{
+	height:150px;
 }
 
 @media (max-width:991px){
@@ -753,6 +812,29 @@ footer .nav-link, footer a, footer p {
 		max-width:570px;
 	}
 
+	.page-content-wrap h1{
+		font-size:30px;
+	}
+
+	.page-content-wrap h2{
+		font-size:26px;
+	}
+
+	.page-content-wrap h3{
+		font-size:23px;
+	}
+
+	.page-content-wrap h4{
+		font-size:20px;
+	}
+
+	.page-content-wrap h5{
+		font-size:18px;
+	}
+
+	.page-content-wrap h6{
+		font-size:16px;
+	}
 }
 
 @media (min-width:768px) and (max-width:991px){

@@ -36,14 +36,25 @@ require_once('template-parts/head.php');
 
                             while(have_posts()){
 
+
+
                                 the_post();
+
+                                $post_img = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
                     
                     ?>
 
-                    <div class="col-md-4 article">
+                    <div class="col-md-6 col-lg-4 col-xl-3 article">
                         <div class="artcl-wrap">
                             <div class="artcl-thumb">
-                                <img src="https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dmlld3xlbnwwfHwwfHw%3D&w=1000&q=80" class="img-fluid">
+                                
+                                
+
+                                <img src="<?php echo $post_img[0]; ?>" class="img-fluid">
+                            </div>
+                            <div class="artcl-meta">
+                                <span class="date"><?php echo the_author().' | '; ?></span>
+                                <span class="author"><?php echo get_the_date(); ?></span>
                             </div>
                             <h2 class="artcl-title"><?php echo the_title(); ?></h2>
                             <p class="artcl-desc">
