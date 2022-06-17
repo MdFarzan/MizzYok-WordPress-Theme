@@ -731,6 +731,27 @@ textarea{
 	height:150px;
 }
 
+.comment-respond label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.comment-respond {
+    margin: 50px 0 20px;
+}
+
+.comments {
+    margin: 60px 0;
+}
+
+.comment-author.vcard img{
+    width: 80px;
+}
+
+.commentlist .comment{
+	margin-bottom: 50px;
+}
+
 @media (max-width:991px){
 	.hero #navbarNav {
 		margin-top: 20px;

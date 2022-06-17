@@ -39,6 +39,12 @@
                             <?php
                                 echo the_content();
                             ?>
+
+
+                            <div class="comments">
+                                <?php comments_template(); ?>
+                            </div>
+
                         </div>
                     </div>
 
