@@ -14,7 +14,7 @@ require_once('template-parts/head.php');
     <?php  wp_body_open(); ?>
     <!-- body starts -->
     <div id="wrapper">
-        <div class="container">
+        <div class="ct-container">
             <div class="hero">
                 <header>
                     <?php
@@ -27,7 +27,7 @@ require_once('template-parts/head.php');
         <?php require_once('template-parts/page-title.php'); ?>
 
         <div class="page-content-wrap">
-            <div class="container">
+            <div class="ct-container">
                 <div class="row">
 
                     <?php 

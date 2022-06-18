@@ -9,7 +9,7 @@
 
 <!-- title content starts -->
 <div class="page-title">
-        <div class="container py-4 py-md-5">
+        <div class="ct-container py-4 py-md-5">
             <h1><?php if(get_post_type() === 'post' && is_single()){
                 echo the_title();
             } 

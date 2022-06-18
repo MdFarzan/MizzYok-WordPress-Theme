@@ -12,17 +12,18 @@
 ?>
 
 <nav class="navbar navbar-expand-lg prim-bg sec-font">
-                        <div class="container-fluid">
-                        <a class="navbar-brand tir-color" id="header-logo" href="#">
+                        <div class="ct-container-fluid">
+                        <a class="navbar-brand tir-color" id="header-logo" href="<?php echo get_home_url(); ?>">
                             <?php 
                                 if ( has_custom_logo() ) {
-                                    echo '<a href="'. get_home_url() .'"><img id="header-logo" src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '"></a>';
+                                    echo '<img id="header-logo" src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '">';
                                 }
                                 
                                 if((get_theme_mod('header_text') !== 0) && (get_bloginfo('description') !== '')) {
-                                    echo '<h1><a href="'. get_home_url() .'">'.get_bloginfo('name').'</a></h1>';
+                                    echo '<h1>'. get_home_url() .'">'.get_bloginfo('name').'</h1>';
                                     echo '<p class="tagline">'.get_bloginfo('description').'</p>';
                                 }
+                        
                             
                             ?>
                         </a>

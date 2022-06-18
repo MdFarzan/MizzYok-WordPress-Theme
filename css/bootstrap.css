@@ -5,6 +5,11 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+
+ /* 
+    fix for using boostrap for wp themes
+    .container-* replaced with .ct-container-*
+ */
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -589,13 +594,13 @@ progress {
   color: #6c757d;
 }
 
-.container,
-.container-fluid,
-.container-xxl,
-.container-xl,
-.container-lg,
-.container-md,
-.container-sm {
+.ct-container,
+.ct-container-fluid,
+.ct-container-xxl,
+.ct-container-xl,
+.ct-container-lg,
+.ct-container-md,
+.ct-container-sm {
   width: 100%;
   padding-right: var(--bs-gutter-x, 0.75rem);
   padding-left: var(--bs-gutter-x, 0.75rem);
@@ -604,27 +609,27 @@ progress {
 }
 
 @media (min-width: 576px) {
-  .container-sm, .container {
+  .ct-container-sm, .ct-container {
     max-width: 540px;
   }
 }
 @media (min-width: 768px) {
-  .container-md, .container-sm, .container {
+  .ct-container-md, .ct-container-sm, .ct-container {
     max-width: 720px;
   }
 }
 @media (min-width: 992px) {
-  .container-lg, .container-md, .container-sm, .container {
+  .ct-container-lg, .ct-container-md, .ct-container-sm, .ct-container {
     max-width: 960px;
   }
 }
 @media (min-width: 1200px) {
-  .container-xl, .container-lg, .container-md, .container-sm, .container {
+  .ct-container-xl, .ct-container-lg, .ct-container-md, .ct-container-sm, .ct-container {
     max-width: 1140px;
   }
 }
 @media (min-width: 1400px) {
-  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+  .ct-container-xxl, .ct-container-xl, .ct-container-lg, .ct-container-md, .ct-container-sm, .ct-container {
     max-width: 1320px;
   }
 }
@@ -3938,13 +3943,13 @@ textarea.form-control-lg {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
-.navbar > .container,
-.navbar > .container-fluid,
-.navbar > .container-sm,
-.navbar > .container-md,
-.navbar > .container-lg,
-.navbar > .container-xl,
-.navbar > .container-xxl {
+.navbar > .ct-container,
+.navbar > .ct-container-fluid,
+.navbar > .ct-container-sm,
+.navbar > .ct-container-md,
+.navbar > .ct-container-lg,
+.navbar > .ct-container-xl,
+.navbar > .ct-container-xxl {
   display: flex;
   flex-wrap: inherit;
   align-items: center;

@@ -37,14 +37,14 @@ $stat_bg =  get_theme_mod('stat_bg', '');
     <?php  wp_body_open(); ?>
     <!-- body starts -->
     <div id="wrapper">
-        <div class="container">
+        <div class="ct-container">
             <div class="hero">
                 <header>
                     <?php get_header(); ?>
 
                     <!-- hero content starts -->
                     <section>
-                        <div class="container">
+                        <div class="ct-container">
                             <div class="row flex-column-reverse flex-md-row ">
                                 <div class="col-md-6 d-flex align-items-center">
                                     <div class="hero-content-wrapper py-2 text-center text-md-start">
@@ -82,7 +82,7 @@ $stat_bg =  get_theme_mod('stat_bg', '');
         <!-- spacing -->
         
         <section class="about-us">
-            <div class="container-fluid">
+            <div class="ct-container-fluid">
                 <div class="row">
                     
                     <div class="col-md-5 g-0 align-items-center">
@@ -115,7 +115,7 @@ $stat_bg =  get_theme_mod('stat_bg', '');
         </section>
 
         <section class="services">
-            <div class="container">
+            <div class="ct-container">
                 <div class="sec-title title-center">
                     <span class="sub-heading"><?php echo get_theme_mod('service_sub_title', ''); ?></span>
                     <h2><?php echo get_theme_mod('service_title', ''); ?></h2>
@@ -218,7 +218,7 @@ $stat_bg =  get_theme_mod('stat_bg', '');
         <div class="statistics-wrap" style="background-image:url('<?php echo get_theme_mod('stat_bg', '') ; ?>;')">
             <section class="statistics">
                 
-                    <div class="container">
+                    <div class="ct-container">
                         <div class="row">
                             <div class="col-md-6 col-lg-3 py-3">
                                 <div class="stat-box">
@@ -263,7 +263,7 @@ $stat_bg =  get_theme_mod('stat_bg', '');
         </div>
 
         <section class="testimonial-slider">
-            <div class="container">
+            <div class="ct-container">
                 <div class="test-slider-wrapper">
                     <div class="stack">
                         <div class="sheet">
@@ -341,7 +341,7 @@ $stat_bg =  get_theme_mod('stat_bg', '');
 
         <section class="cta-wrap">
             <div class="cta">
-                <div class="container">
+                <div class="ct-container">
                     <div class="row">
                         <div class="col-md-8 col-lg-8 text-center text-md-start">
                             <h3><?php echo get_theme_mod('cta_title', ''); ?></h3>
@@ -361,7 +361,7 @@ $stat_bg =  get_theme_mod('stat_bg', '');
     
 
 
-    <?php wp_footer(); ?>
+    
 
 </body>
 </html>

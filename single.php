@@ -12,7 +12,7 @@
     <?php  wp_body_open(); ?>
     <!-- body starts -->
     <div id="wrapper">
-        <div class="container">
+        <div class="ct-container">
             <div class="hero">
                 <header>
                     <?php
@@ -24,7 +24,7 @@
         <?php require_once('template-parts/page-title.php'); ?>
 
         <div class="page-content-wrap">
-            <div class="container">
+            <div class="ct-container">
                 <div class="row">
                     <div class="col-md-8">
                         <div class="post-feature-img">
